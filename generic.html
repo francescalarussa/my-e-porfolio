@@ -77,60 +77,49 @@
 											<img src="images/Unit3Sum.png" alt="Unit 1" style="max-width:100%; height:auto;">
 										<h4>Web Scrapping exercise</h4>
 										<p>
-Web Scraping
+                                        Web Scraping
 
-In this activity, I created a Python script to extract and organize information from the Prospectus webpage discussing the Data Scientist role. The goal was to identify the key content of the professional profile. The data were then collected in a JSON file to allow easy and structured consultation for the content analysis.
+                                        In this activity, I created a Python script to extract and organize information from the Prospectus webpage discussing the Data Scientist role. The goal was to identify the key content of the professional profile. The data were then collected in a JSON file to allow easy and structured consultation for the content analysis.
 
+										The script is as follows:
 
+                                        from bs4 import BeautifulSoup
 
-The script is as follows:
+                                        import requests
 
+                                         import json
 
+                                        url= "https://www.prospects.ac.uk/job-profiles/data-scientist"
 
-from bs4 import BeautifulSoup
+                                        response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
 
-import requests
+                                        soup= BeautifulSoup(response.text, "html.parser")
 
-import json
+                                        print("Title:", soup.find("h1").text)
 
-url= "https://www.prospects.ac.uk/job-profiles/data-scientist"
+                                        print("\n Data Scientist content:\n")
 
-response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+                                        results = soup.find_all(string=lambda text: "data scientist" in text.lower())
 
-soup= BeautifulSoup(response.text, "html.parser")
+                                        for r in results[:10]:
 
-print("Title:", soup.find("h1").text)
+                                        print("-", r.strip())
 
-print("\n Data Scientist content:\n")
+                                        with open("data_science.json", "w") as f:
 
-results = soup.find_all(string=lambda text: "data scientist" in text.lower())
+                                        json.dump({"results":[r.strip() for r in results]}, f, indent=4)
 
-for r in results[:10]:
+                                        print("\nFile JSON correctly created”)
 
-    print("-", r.strip())
+                                        The results can be found in the attached file.
 
-with open("data_science.json", "w") as f:
-
-    json.dump({"results":[r.strip() for r in results]}, f, indent=4)
-
-    print("\nFile JSON correctly created”)
-
-
-
-
-
-The results can be found in the attached file.
-
-
-
-After completing this activity, I can affirm that using libraries such as “Requests” and “BeautifulSoup” allows for collecting the desired data efficiently. In addition, Web Scraping enables the isolation of key information without the need to read the entire webpage. This methodology can be extremely useful in other contexts, allowing systematic and automated data collection.
-
-
-</p>
-										
+										After completing this activity, I can affirm that using libraries such as “Requests” and “BeautifulSoup” allows for collecting the desired data efficiently. In addition, Web Scraping enables the isolation of key information without the need to read the entire webpage. This methodology can be extremely useful in other contexts, allowing systematic and automated data collection.</p>
+											<a href="assets/files/data_science.json" download> Download JSON </a>
+										</span>
+									</section>
 
 						
-											
+				
 								</div>
 							</section>
 
@@ -219,6 +208,7 @@ After completing this activity, I can affirm that using libraries such as “Req
 	</body>
 
 </html>
+
 
 
 
