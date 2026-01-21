@@ -83,34 +83,20 @@
 
 										The script is as follows:
 											<pre><code>
-
-                                        from bs4 import BeautifulSoup
-
-                                        import requests
-
-                                         import json
-
-                                        url= "https://www.prospects.ac.uk/job-profiles/data-scientist"
-
-                                        response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
-
-                                        soup= BeautifulSoup(response.text, "html.parser")
-
-                                        print("Title:", soup.find("h1").text)
-
-                                        print("\n Data Scientist content:\n")
-
-                                        results = soup.find_all(string=lambda text: "data scientist" in text.lower())
-
-                                        for r in results[:10]:
-
-                                        print("-", r.strip())
-
-                                        with open("data_science.json", "w") as f:
-
-                                        json.dump({"results":[r.strip() for r in results]}, f, indent=4)
-
-                                        print("\nFile JSON correctly created”)
+											from bs4 import BeautifulSoup
+										    import requests
+											import json
+                                            url= "https://www.prospects.ac.uk/job-profiles/data-scientist"
+                                            response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+											soup= BeautifulSoup(response.text, "html.parser")
+											print("Title:", soup.find("h1").text)
+											print("\n Data Scientist content:\n")
+											results = soup.find_all(string=lambda text: "data scientist" in text.lower())
+											for r in results[:10]:
+											print("-", r.strip())
+											with open("data_science.json", "w") as f:
+											json.dump({"results":[r.strip() for r in results]}, f, indent=4)
+											print("\nFile JSON correctly created”)
 											</code></pre>
 
                                         The results can be found in the attached file.
@@ -210,6 +196,7 @@
 	</body>
 
 </html>
+
 
 
 
