@@ -82,6 +82,7 @@
                                         In this activity, I created a Python script to extract and organize information from the Prospectus webpage discussing the Data Scientist role. The goal was to identify the key content of the professional profile. The data were then collected in a JSON file to allow easy and structured consultation for the content analysis.
 
 										The script is as follows:
+											<pre><code>
 
                                         from bs4 import BeautifulSoup
 
@@ -110,6 +111,7 @@
                                         json.dump({"results":[r.strip() for r in results]}, f, indent=4)
 
                                         print("\nFile JSON correctly created”)
+											</code></pre>
 
                                         The results can be found in the attached file.
 
@@ -208,6 +210,7 @@
 	</body>
 
 </html>
+
 
 
 
