@@ -324,6 +324,46 @@ This Unit helped me gain a better understanding of the database building phases,
 <h4 class="page-title">API Security Requirements</h4>
 <p>As mentioned above, during this Unit, I completed the API Security Requirements exercise. Below you can download the exercise PDF</p>
 <a href="assets/API_Requirements.pdf" download>Download PDF</a>	
+section class="box">
+<h2>Unit 11 - DBMS Transaction and Recovery</h2>
+<p>During Unit 11, I had the opportunity to delve into uncommon file types and PDFs that are challenging to manage.<br>
+The general strategy to be followed is as follows:<br>
+- Identify a file type: control the file type or use the Python library python-magic<br>
+- Browsing online solutions <br>
+- Opening manually with a text editor or using the command open() in Python, if the characters are odd, verify the encoding <br>
+- Convert the data into an easier format.<br>
+The core Python tools for working with PDF files are as follows:<br>
+- slate: read the PDF as a memory string<br>
+- pdfminer: convert the PDF into text<br>
+- pdftable: use pdfminer and try to rebuild the tables<br>
+- tabula: extract the table in CSV<br>
+In addition, I used the Trailhead website to delve into data presentation. The three best practice categories for designing a dashboard are planning, informative design, and finishing.<br>
+Every element of the dashboard must be used to explain the data, and the use of colours or tooltips is used only to guide the interpretation. To create a good dashboard, clutter must be removed and significant differentiation added. In addition, it is necessary to add information that explains what the graph shows and tooltips with detailed information, while keeping them clear.<br>
+To create a clear dashboard in Tableau by combining vizzes and controlling the layout, dimension, and presentation to guide the user in understanding the data, the following key points must be considered:<br>
+- Define the dashboard dimension based on where it will be visualised<br>
+- Add clear titles and explanatory texts<br>
+- Remove elements that will distract the user<br>
+- Organize the layout and rename the dashboard with a clear name.<br>
+To create an interactive dashboard:<br>
+- Add a filter to help navigate data<br>
+- Show only relevant values in the filter<br>
+- Test the filter<br>
+n Unit 11, there are additional notes on database transactions and recovery.<br>
+A transaction is a series of database operations that can be fully executed or not. The transactions follow the ACID properties, which are: <br>
+- Atomicity: all is executed, or nothing is executed <br>
+- Consistency: the database moves from one consistent status to another<br>
+- Isolation: the transactions are isolated<br>
+- Durability: Once completed, the modifications are permanent and irreversible<br>
+The transaction manager manages the transaction and guarantees ACID properties. The use of commit produces permanent transactions, and the rollback cancels the modification if the transaction fails.<br>
+The transaction log is a file that records all transactions and how to cancel them, and contains previous and new values, a timestamp, and the transaction state.<br>
+If there is a system failure, to know how far back in the log file we must go, we can use checkpoints, which are system-controlled points at which synchronization occurs between the database and log file.<br>
+To recover from a system failure, all transactions that were running during the failure must be undone and restarted. A serious issue arises when there is a media failure; to recover from it, a backup is needed. Backups must be performed frequently to minimize data loss.<br>
+In this unit, I submitted a part of my final exam and posted on the wiki module an evaluation of the GFS backup procedure.<br>
+This Unit helped me delve into new concepts, such as transactions and backups, which are crucial aspects of database management. It allowed me to understand the importance of anticipating potential failures and errors when designing a database.</p>
+<h3 class="page-title"> Back Up Procedure </h3>
+<p>During this Unit, I posted a text on GFS backup procedure on wiki module as it is possible to see in the screenshot below</p>
+<span class="image fit">
+	<img src="images/Backup_wiki_post.png" alt="Unit 11" style="max-width:100%; height:auto;">
 
 			
 								</div>
@@ -414,6 +454,7 @@ This Unit helped me gain a better understanding of the database building phases,
 	</body>
 
 </html>
+
 
 
 
