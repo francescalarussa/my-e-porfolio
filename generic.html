@@ -242,8 +242,38 @@ Through this unit, I learned that different database management systems signific
 										<span class="image fit">
 											<img src="images/Unit_8_Initial.png" alt="Unit 8" style="max-width:100%; height:auto;">
 	
-
-						
+<section class="box">
+	<h2>Unit 9 - Data Management Systems and Models</h2>
+	<p>Unit 9 focuses on database models and their applications. There are three approaches to data management:<br>
+	- Traditional: creates separate files for each application. The major challenges are data redundancy and data integrity.<br>
+	- Database: A pool of related data shared among multiple applications. The main advantages are: control of data redundancy and flexibility.<br>
+	- DBMS that is composed of three parts: hardware (from a standalone computer to a network of computers), software, which includes DBMS, operating system, and network applications.<br>
+	- Data used by the organisation and schema description (description of data) <br>
+	A database can be hierarchical, which is easy to manipulate and has easy relations, a network that is more flexible, or relational, which allows linking relational tables. <br>
+	Before designing a database, the following must be considered: content, access, logical structure, which is a model of how the database is structured to meet requirements, and physical organization, which refers to how data will be stored and organized in the database.<br>
+	The DBMS to be implemented must support SQL (a programming language for extracting information from databases). In addition, the DBMS must support multiple users and be sufficiently efficient to handle large datasets and support easy migration between hardware.<br>
+	The core artifacts for database implementation are as follows:<br>
+	- A schema, which contains information about the database. It contains user restriction information, security measures, and access control.<br>
+	- Data dictionary: description of all the data in the database <br>
+	It is also important to list some key terms:<br>
+	- Relation: a table with columns and rows<br>
+	- Attribute: named columns of a relation<br>
+	- Domain: Set of allowable values<br>
+	- Tuple: a record of a relation<br>
+	- Base table: record physically stored in the database<br>
+	- Primary key: unique tuple identifier<br>
+	- Foreign key: a set of attributes with one relation that match a candidate key of another table<br>
+	Moving on to the database view, it is possible to define a view as a virtual relation that can also not exist in the database and is created upon a request. The view content is a query on one or more base relations to simplify the complex operations. Customized data through views and queries can show different data to different users.<br>
+	In a database, an application program can be defined as a series of transitions that act on the data for a particular function. The transaction can be either successful or unsuccessful. Concurrency control allows the management of simultaneous operations on the database without interference.<br>
+	Moving on to big data architecture, it is possible to affirm that big data architectures manage the ingestion, processing, and analysis of data that are too big or complex for traditional systems. Big data architecture supports batch and real-time data processing, interactive exploration, predictive analysis, and ML.<br>
+	An example of an architecture is the Internet of Things (IoT), an event-driven architecture for devices that generate large volumes of data. Devices send events through gateways, stream processing allows real-time analytics, and data is stored for batch analysis and machine learning.<br>
+	During this unit, I continued the collaborative discussion on “comparing compliance law,” posting two peer reviews, and I tried to create a DBMS from Python for a seminar activity.</p>
+	<h3> Collaborative Discussion - Peer reviews</h3>
+	<p>As mentioned above, during this Unit, I took part in a collaborative discussion on Comparing compliance laws. The screenshot below shows my two peer reviews</p>
+	<span class="image fit">
+	<img src="images/Unit_8_peer_review.png" alt="Unit 8" style="max-width:100%; height:auto;">
+	<span class="image fit">
+	<img src="images/Unit_8_peer_review2.png" alt="Unit 8" style="max-width:100%; height:auto;">				
 				
 								</div>
 							</section>
@@ -333,6 +363,7 @@ Through this unit, I learned that different database management systems signific
 	</body>
 
 </html>
+
 
 
 
